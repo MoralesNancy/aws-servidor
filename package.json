@@ -1,14 +1,11 @@
 {
   "name": "project-node",
   "version": "1.0.0",
-  "description": "Full Stack Open",
+  "description": "Mi primer pipeline",
   "main": "server.js",
   "scripts": {
-    "start": "webpack-dev-server --open --node development",
-    "start-prod": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint './**/*.{js,jsx}'",
-    "build": "webpack --node production"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
