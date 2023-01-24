@@ -16,9 +16,7 @@ jobs:
         
       - name: Run a multi-line script
         run:  |
-           echo "Hola este es mi primer pipeline"
-      - name: Dame la hora
-        run: time
-      - name: Archivotxt  
-        run: touch hola.txt
-      - run: ls -l        
+           echo Hola este es mi primer pipeline,
+           time,
+           touch hola.txt,
+           ls -la
