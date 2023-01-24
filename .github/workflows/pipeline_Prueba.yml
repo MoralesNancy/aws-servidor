@@ -1,9 +1,8 @@
 name: pipeline_Prueba
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+    - main
     
   workflow_dispatch:
 jobs:
@@ -14,9 +13,12 @@ jobs:
       - name: Check out proyect
       - name: Run a one-line script
         run: echo Hello, world 2!
+        
       - name: Run a multi-line script
-        run: |
-          - echo Hola este es mi primer pipeline,
-          - time
-          - touch hola.txt
-          - ls -la
+        run:  echo Hola este es mi primer pipeline,
+      - name: tiemmpo
+        run: time,
+      - name: txt
+        run:  touch hola.txt,
+      - name: ls
+        run: ls -la
