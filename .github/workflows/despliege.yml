@@ -19,6 +19,7 @@ jobs:
         run: npm install --no-audit --no-fund --no-optional
       - name: Instancia
         run: |
+          ls
           listaArchivos=`ls -I .gitignore -I devops -I .github`
           zip -r aws-servidor.zip
       - name: AWS-Servidor EC2 instance 
