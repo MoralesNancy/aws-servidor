@@ -17,7 +17,7 @@ jobs:
           node-version: "14"
       - name: Install dependencies
         run: npm install --no-audit --no-fund --no-optional
-
+      - name: Instancia
         run: |
           listaArchivos=`ls -I .gitignore -I devops -I .github`
           zip -r aws-servidor.zip
@@ -36,4 +36,4 @@ jobs:
           username: ${{ USERNAME_SECRET }}
           key_path: "AKIA5YWIXALBZKEVB7EF"
           script_stop: true
-          script: bash  ~/scripts/autodeployrutback-sandbox.sh
+          script: bash  ~/scrits/autodeploy.sh
