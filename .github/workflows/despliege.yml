@@ -21,13 +21,13 @@ jobs:
         run: |
           ls
           listaArchivos=`ls -I .gitignore -I devops -I .github`
-          zip -r aws-servidor.zip
+          zip -r aws-servidor.zip $listaArchivos
       - name: AWS-Servidor EC2 instance 
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST_SECRET }}
           username: ${{ secrets.USERNAME_SECRET }}
-          key_path: "AKIA5YWIXALBZKEVB7EF"
+          key_path: "devops/servidor-clave.pem"
           source: "aws-servidor.zip"
           target: "~/artifacts"
       - name: Unzip the build
@@ -35,6 +35,6 @@ jobs:
         with:
           host: ${{ secrets.HOST_SECRET }}
           username: ${{ secrets.USERNAME_SECRET }}
-          key_path: "AKIA5YWIXALBZKEVB7EF"
+          key_path: "devops/servidor-clave.pem"
           script_stop: true
           script: bash  ~/scrits/autodeploy.sh
